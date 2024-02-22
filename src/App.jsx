@@ -4,7 +4,8 @@ import { faGlobe } from '@fortawesome/free-solid-svg-icons';
 import { faLinkedin, faYoutube, faXTwitter } from '@fortawesome/free-brands-svg-icons';
 import logo from './assets/Logo.png';
 import Particles, { initParticlesEngine } from '@tsparticles/react';
-import { loadFull } from 'tsparticles';
+import { loadSlim } from '@tsparticles/slim'
+// import { loadFull } from 'tsparticles';
 
 const App = () => {
   const [init, setInit] = useState(false);
@@ -16,8 +17,8 @@ const App = () => {
       // this loads the tsparticles package bundle, it's the easiest method for getting everything ready
       // starting from v2 you can add only the features you need reducing the bundle size
       //await loadAll(engine);
-      await loadFull(engine);
-      //await loadSlim(engine);
+      //await loadFull(engine);
+      await loadSlim(engine);
       //await loadBasic(engine);
     }).then(() => {
       setInit(true);
