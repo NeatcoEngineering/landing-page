@@ -1,0 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+/* Set the custom font-family as the default for the whole app */
+body {
+    font-family: 'Open Sans', sans-serif;
+  }
