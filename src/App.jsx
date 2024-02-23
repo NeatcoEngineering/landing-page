@@ -109,7 +109,7 @@ const App = () => {
             <img src={logo} alt="Neatco Engineering Services Inc Logo" className="mx-auto h-20 w-20" />
             <h1 className="text-xl font-semibold text-gray-800 mt-2">Neatco Engineering Services Inc.</h1>
             <p className="text-gray-600 mt-2">Pioneering the future of the Circular Economy with AI and Vision technologies, AI-driven robotics, and cutting-edge IIoT Web Applications.</p>
-            <p className="text-gray-600 mt-2">Crafting solutions that redefine advanced manufacturing, automation, and recycling industries.</p>
+            <p className="text-gray-600 mt-2">Crafting solutions that redefine advanced manufacturing, automation and robotics industries.</p>
           </div>
 
           {/* Links */}
