@@ -11,7 +11,7 @@ const App = () => {
   const [init, setInit] = useState(false);
 
   // this should be run only once per application lifetime
-  useEffect(() => {
+  // useEffect(() => {
     initParticlesEngine(async (engine) => {
       // you can initiate the tsParticles instance (engine) here, adding custom shapes or presets
       // this loads the tsparticles package bundle, it's the easiest method for getting everything ready
@@ -23,7 +23,7 @@ const App = () => {
     }).then(() => {
       setInit(true);
     });
-  }, []);
+  // }, []);
 
   const particlesLoaded = (container) => {
     console.log(container);
@@ -101,7 +101,7 @@ const App = () => {
 
   return (
     <div style={{position: 'relative', width: '100vw', height: '100vh', overflow: 'hidden'}}>
-      {init && <Particles style={{position: 'absolute', top: 0, left: 0, width: '100%', height: '100%'}} id="tsparticles" particlesLoaded={particlesLoaded} options={options} />}
+      {init && <Particles init={initParticlesEngine} style={{position: 'absolute', top: 0, left: 0, width: '100%', height: '100%'}} id="tsparticles" particlesLoaded={particlesLoaded} options={options} />}
       <div style={{position: 'relative', zIndex: 1, width: '100%', height: '100%', display: 'flex', justifyContent: 'center', alignItems: 'center'}} className="min-h-screen opacity-90 flex flex-col items-center justify-center">
         <div className="bg-white p-6 rounded-lg shadow-lg">
           {/* Logo and Company Description */}
