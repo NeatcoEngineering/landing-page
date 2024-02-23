@@ -1,100 +1,14 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGlobe } from '@fortawesome/free-solid-svg-icons';
 import { faLinkedin, faYoutube, faXTwitter } from '@fortawesome/free-brands-svg-icons';
 import logo from './assets/Logo.png';
-import Particles, { initParticlesEngine } from '@tsparticles/react';
-import { loadSlim } from '@tsparticles/slim'
 
 const App = () => {
-  const [init, setInit] = useState(false);
-
-  // Initialize the particles engine
-  initParticlesEngine(async (engine) => {
-    await loadSlim(engine);
-    //await loadBasic(engine);
-  }).then(() => {
-    setInit(true);
-  });
-
-  const particlesLoaded = (container) => {
-    console.log(container);
-  };
-
-  const options = {
-    background: {
-      color: {
-        value: "#000000",
-      },
-    },
-    fpsLimit: 120,
-    interactivity: {
-      events: {
-        onClick: {
-          enable: true,
-          mode: "push",
-        },
-        onHover: {
-          enable: true,
-          mode: "repulse",
-        },
-        resize: true,
-      },
-      modes: {
-        push: {
-          quantity: 4,
-        },
-        repulse: {
-          distance: 200,
-          duration: 0.4,
-        },
-      },
-    },
-    particles: {
-      color: {
-        value: "#1ed42d",
-      },
-      links: {
-        color: "#1ed42d",
-        distance: 150,
-        enable: true,
-        opacity: 0.5,
-        width: 4,
-      },
-      move: {
-        direction: "none",
-        enable: true,
-        outModes: {
-          default: "bounce",
-        },
-        random: false,
-        speed: 3,
-        straight: false,
-      },
-      number: {
-        density: {
-          enable: true,
-          area: 800,
-        },
-        value: 200,
-      },
-      opacity: {
-        value: 0.5,
-      },
-      shape: {
-        type: "circle",
-      },
-      size: {
-        value: { min: 1, max: 5 },
-      },
-    },
-    detectRetina: true,
-  };
-
   return (
-    <div style={{position: 'relative', width: '100vw', height: '100vh', overflow: 'hidden'}}>
-      {init && <Particles init={initParticlesEngine} style={{position: 'absolute', top: 0, left: 0, width: '100%', height: '100%'}} id="tsparticles" particlesLoaded={particlesLoaded} options={options} />}
-      <div style={{position: 'relative', zIndex: 1, width: '100%', height: '100%', display: 'flex', justifyContent: 'center', alignItems: 'center'}} className="min-h-screen opacity-90 flex flex-col items-center justify-center">
+    <>
+      <div class="absolute w-full h-full top-0 left-0 z-[-1] animate-gradientBG"></div>
+      <div className="min-h-screen opacity-80 flex flex-col items-center justify-center">
         <div className="bg-white p-6 rounded-lg shadow-lg">
           {/* Logo and Company Description */}
           <div className="mb-4 text-center">
@@ -125,7 +39,7 @@ const App = () => {
           </div>
         </div>
       </div>
-    </div>
+    </>
   );
 };
 

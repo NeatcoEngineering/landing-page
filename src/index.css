@@ -1,7 +1,20 @@
+@keyframes gradientBG {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 200% 50%;
+  }
+}
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-/* Set the custom font-family as the default for the whole app */
-body {
-    font-family: 'Open Sans', sans-serif;
+
+@layer utilities {
+  .animate-gradientBG {
+    animation: gradientBG 15s infinite ease;
+    background-image: linear-gradient(to right, black, green, black);
+    background-size: 200% 200%;
   }
+}
