@@ -1,29 +1,21 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGlobe } from '@fortawesome/free-solid-svg-icons';
 import { faLinkedin, faYoutube, faXTwitter } from '@fortawesome/free-brands-svg-icons';
 import logo from './assets/Logo.png';
 import Particles, { initParticlesEngine } from '@tsparticles/react';
 import { loadSlim } from '@tsparticles/slim'
-// import { loadFull } from 'tsparticles';
 
 const App = () => {
   const [init, setInit] = useState(false);
 
-  // this should be run only once per application lifetime
-  // useEffect(() => {
-    initParticlesEngine(async (engine) => {
-      // you can initiate the tsParticles instance (engine) here, adding custom shapes or presets
-      // this loads the tsparticles package bundle, it's the easiest method for getting everything ready
-      // starting from v2 you can add only the features you need reducing the bundle size
-      //await loadAll(engine);
-      //await loadFull(engine);
-      await loadSlim(engine);
-      //await loadBasic(engine);
-    }).then(() => {
-      setInit(true);
-    });
-  // }, []);
+  // Initialize the particles engine
+  initParticlesEngine(async (engine) => {
+    await loadSlim(engine);
+    //await loadBasic(engine);
+  }).then(() => {
+    setInit(true);
+  });
 
   const particlesLoaded = (container) => {
     console.log(container);
