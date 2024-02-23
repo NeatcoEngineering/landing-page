@@ -16,8 +16,8 @@ const App = () => {
             <h1 className="text-xl font-semibold text-gray-800 mt-2">Neatco Engineering Services Inc.</h1>
             <p className="text-gray-600 mt-2">Pioneering the future of the Circular Economy with AI and Vision technologies, AI-driven robotics, and cutting-edge IIoT Web Applications.</p>
             <p className="text-gray-600 mt-2">Crafting solutions that redefine advanced manufacturing, automation and robotics industries.</p>
+            <p className="text-m font-semibold text-gray-800 mt-2">Check Us Out Below Using The Following Links:</p>
           </div>
-
           {/* Links */}
           <div className="flex justify-around mt-6 text-center">
             <a href="https://www.neatcoeng.com" className="text-gray-600 hover:text-gray-800 transition duration-300">
