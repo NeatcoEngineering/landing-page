@@ -3,43 +3,44 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGlobe } from '@fortawesome/free-solid-svg-icons';
 import { faLinkedin, faYoutube, faXTwitter } from '@fortawesome/free-brands-svg-icons';
 import logo from './assets/Logo.png';
+import banner from './assets/banner.png'
 
 const App = () => {
   return (
-    <>
-      <div class="absolute w-full h-full top-0 left-0 z-[-1] animate-gradientBG"></div>
-      <div className="min-h-screen opacity-80 flex flex-col items-center justify-center">
-        <div className="bg-white p-6 rounded-lg shadow-lg">
-          {/* Logo and Company Description */}
-          <div className="mb-4 text-center">
-            <img src={logo} alt="Neatco Engineering Services Inc Logo" className="mx-auto h-20 w-20" />
-            <h1 className="text-xl font-semibold text-gray-800 mt-2">Neatco Engineering Services Inc.</h1>
-            <p className="text-gray-600 mt-2">Pioneering the future of the Circular Economy with AI and Vision technologies, AI-driven robotics, and cutting-edge IIoT Web Applications.</p>
-            <p className="text-gray-600 mt-2">Crafting solutions that redefine advanced manufacturing, automation, and robotics industries.</p>
-            <p className="text-m font-semibold text-gray-800 mt-2">Check Us Out Below Using The Following Links:</p>
-          </div>
-          {/* Links */}
-          <div className="flex justify-around mt-6 text-center">
-            <a href="https://www.neatcoeng.com" className="text-gray-600 hover:text-gray-800 transition duration-300">
-              <FontAwesomeIcon icon={faGlobe} size="2x" />
-              <span className="block text-sm mt-2">Website</span>
-            </a>
-            <a href="https://www.linkedin.com/company/42872230/" className="text-blue-600 hover:text-blue-800 transition duration-300">
-              <FontAwesomeIcon icon={faLinkedin} size="2x" />
-              <span className="block text-sm mt-2">LinkedIn</span>
-            </a>
-            <a href="https://www.youtube.com/channel/UCeVTUXQMhMoxSp2MsiKuJsg" className="text-red-600 hover:text-red-800 transition duration-300">
-              <FontAwesomeIcon icon={faYoutube} size="2x" />
-              <span className="block text-sm mt-2">YouTube</span>
-            </a>
-            <a href="https://twitter.com/neatcoeng?lang=en" className="text-black hover:text-gray-600 transition duration-300">
-              <FontAwesomeIcon icon={faXTwitter} size="2x" />
-              <span className="block text-sm mt-2">X (Twitter)</span>
-            </a>
+    <div className="relative min-h-screen animate-gradientBG">
+      {/* Banner */}
+      <div className="banner-container">
+        <img src={banner} alt="Banner" />
+      </div>
+
+      {/* Content Container */}
+      <div className="content-container flex flex-col items-center justify-center pt-48 min-h-screen">
+        {/* Logo and Title */}
+        <div className="flex items-center mb-6">
+          <img src={logo} alt="Logo" className="w-16 h-16 mr-4" />
+          <div>
+            <h1 className="text-2xl font-bold text-white">Neatco Engineering</h1>
+            <p className="text-md text-center text-gray-300">AI for the Circular Economy</p>
           </div>
         </div>
+
+        {/* Links Column */}
+        <div className="space-y-4">
+          <a href="https://www.neatcoeng.com" className="flex border-b items-center text-white text-xl">
+            <FontAwesomeIcon icon={faGlobe} className="mr-2" /> Website
+          </a>
+          <a href="https://www.linkedin.com/company/42872230/" className="flex border-b items-center text-white text-xl">
+            <FontAwesomeIcon icon={faLinkedin} className="mr-2 text-blue-700" /> LinkedIn
+          </a>
+          <a href="https://www.youtube.com/channel/UCeVTUXQMhMoxSp2MsiKuJsg" className="flex border-b items-center text-white text-xl">
+            <FontAwesomeIcon icon={faYoutube} className="mr-2 text-red-600" /> YouTube
+          </a>
+          <a href="https://twitter.com/neatcoeng?lang=en" className="flex border-b items-center text-white text-xl">
+            <FontAwesomeIcon icon={faXTwitter} className="mr-2 text-black" /> X (Twitter)
+          </a>
+        </div>
       </div>
-    </>
+    </div>
   );
 };
 

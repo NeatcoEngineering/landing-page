@@ -17,4 +17,35 @@
     background-image: linear-gradient(to right, black, #4CAD49, black);
     background-size: 200% 200%;
   }
+
+  .banner-container {
+    height: 250px; /* Adjust based on your preference */
+    overflow: hidden;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10;
+  }
+
+  .banner-container img {
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+
+  .content-container {
+    padding-top: 200px; /* Initial padding to push content down from the banner */
+  }
+
+  /* Media query for screens smaller than 640px */
+  @media (max-width: 640px) {
+    .banner-container {
+      height: 100px; /* Smaller height for mobile devices */
+    }
+
+    .content-container {
+      padding-top: 120px; /* Reduce padding to bring content closer to the banner */
+    }
+  }
 }
