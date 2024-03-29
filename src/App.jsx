@@ -30,7 +30,7 @@ const App = () => {
             <FontAwesomeIcon icon={faChartBar} className="mr-2" /> IntelView
           </a>
           <a href="https://www.neatcoeng.com" className="flex border-b items-center text-white text-3xl hover:text-gray-300">
-            <FontAwesomeIcon icon={faGlobe} className="mr-2" /> Website
+            <FontAwesomeIcon icon={faGlobe} className="mr-2" /> Neatco
           </a>
           <a href="https://www.linkedin.com/company/42872230/" className="flex border-b items-center text-white text-3xl hover:text-gray-300">
             <FontAwesomeIcon icon={faLinkedin} className="mr-2 text-blue-700" /> LinkedIn
