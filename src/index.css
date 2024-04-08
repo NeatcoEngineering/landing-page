@@ -1,51 +1,23 @@
-@keyframes gradientBG {
-  0% {
-    background-position: 0% 50%;
-  }
-  100% {
-    background-position: 200% 50%;
-  }
-}
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-@layer utilities {
-  .animate-gradientBG {
-    animation: gradientBG 15s infinite ease;
-    background-image: linear-gradient(to right, black, #4CAD49, black);
-    background-size: 200% 200%;
-  }
 
-  .banner-container {
-    height: 350px; /* Adjust based on your preference */
-    overflow: hidden;
-    width: 100%;
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 10;
-  }
+.button-link {
+  width: 90%;
+  max-width: 400px; /* You can adjust the maximum width as per your preference */
+  margin-bottom: 1rem;
+  padding: 1.5rem;
+  text-align: center;
+  background-image: linear-gradient(120deg, #84fab0 0%, #8fd3f4 100%);
+  border-radius: 0.5rem;
+  color: rgb(67, 66, 66);
+  transition: all 0.3s ease;
+  font-size: 1.5rem;
+}
 
-  .banner-container img {
-    width: 100%;
-    object-fit: cover;
-    object-position: center;
-  }
 
-  .content-container {
-    padding-top: 200px; /* Initial padding to push content down from the banner */
-  }
-
-  /* Media query for screens smaller than 640px */
-  @media (max-width: 640px) {
-    .banner-container {
-      height: 100px; /* Smaller height for mobile devices */
-    }
-
-    .content-container {
-      padding-top: 120px; /* Reduce padding to bring content closer to the banner */
-    }
-  }
+.button-link:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
 }
