@@ -2,6 +2,12 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+## Build application
+
+### `npm i`
+
+This command installs all necessary packages.
+
 ## Available Scripts
 
 In the project directory, you can run:
@@ -68,3 +74,16 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+## Deploying the landing page
+
+All changes can be made directly in App.jsx. You can add buttons, change URLs, etc pretty straight forward.
+
+### Push code to main as per usual when ready
+
+### Go to render (look up username password in docs)
+
+Now deploy the application manually after logging in;
+- go to landing page project
+- go to drop down and click trigger deploy manually
+- this should trigger a build and once it is complete, the webiste will be live with your changes
