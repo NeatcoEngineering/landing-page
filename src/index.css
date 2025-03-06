@@ -9,9 +9,9 @@
   margin-bottom: 1rem;
   padding: 1.5rem;
   text-align: center;
-  background-image: linear-gradient(120deg, #84fab0 0%, #8fd3f4 100%);
+  background-image: linear-gradient(120deg, #3a0d63 0%, #af2075 100%);
   border-radius: 0.5rem;
-  color: rgb(67, 66, 66);
+  color: white;
   transition: all 0.3s ease;
   font-size: 1.5rem;
 }
@@ -20,4 +20,19 @@
 .button-link:hover {
   transform: scale(1.05);
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.banner-container {
+  animation: slideDown 1s ease-out;
+}
+
+@keyframes slideDown {
+  from {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
 }

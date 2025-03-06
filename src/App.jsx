@@ -3,13 +3,13 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGlobe, faChartBar } from '@fortawesome/free-solid-svg-icons';
 import { faLinkedin, faYoutube, faXTwitter } from '@fortawesome/free-brands-svg-icons';
 import logo from './assets/Logo.png';
-import banner from './assets/banner.png'
+import banner from './assets/discoveryx_banner.png';
 
 const App = () => {
   return (
     <div>
       {/* Banner */}
-      <div className='flex aligns-center items-center justify-center'>
+      <div className="banner-container flex aligns-center items-center justify-center">
         <img src={banner} alt="Banner" />
       </div>
 
@@ -19,8 +19,8 @@ const App = () => {
         <div className="flex items-center mb-6">
           <img src={logo} alt="Logo" className="w-16 h-16 mr-4" />
           <div>
-            <h1 className="text-3xl font-bold text-gray-700 text-m sm:text-4xl">Neatco Engineering</h1>
-            <p className="text-lg text-center text-gray-700">AI for the Circular Economy</p>
+            <h1 className="text-3xl font-bold text-white-700 text-m sm:text-4xl">Neatco Engineering</h1>
+            <p className="text-lg text-center text-white-700">AI for the Circular Economy</p>
           </div>
         </div>
 
