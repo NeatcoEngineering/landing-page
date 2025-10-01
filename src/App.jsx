@@ -40,7 +40,7 @@ const App = () => {
         {/* Survey Link - shown after modal is closed */}
         {showSurveyLink && (
           <div className="mb-6 text-center">
-            <p className="text-md mb-2">We'd love your feedback!</p>
+            <p className="text-md mb-2">We'd love your feedback</p>
             <a
               href={AI_IN_MANUFACTURING_FORM_URL}
               target="_blank"
