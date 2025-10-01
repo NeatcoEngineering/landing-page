@@ -1,0 +1,1 @@
+export const AI_IN_MANUFACTURING_FORM_URL = "https://forms.office.com/Pages/ResponsePage.aspx?id=HweSykLzx0CDhWmXpgUmzLkQ_RxUAThMtHM1NzyplCJUN09KOVdMUVZVV002MExSU05DQTJSQUxRMS4u&origin=QRCode";

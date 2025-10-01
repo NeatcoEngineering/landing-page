@@ -1,11 +1,26 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faGlobe, faChartBar } from '@fortawesome/free-solid-svg-icons';
+import { faGlobe, faChartBar, faArrowRight } from '@fortawesome/free-solid-svg-icons';
 import { faLinkedin, faYoutube, faXTwitter } from '@fortawesome/free-brands-svg-icons';
-import logo from './assets/Logo.png';
-import banner from './assets/discoveryx_banner.png';
+import banner from './assets/emc_banner.png';
+import FeedbackModal from './FeedbackModal';
+import { AI_IN_MANUFACTURING_FORM_URL } from './constants';
 
 const App = () => {
+  const [showSurveyLink, setShowSurveyLink] = useState(false);
+
+  useEffect(() => {
+    // Check if modal has been closed before - if so, show survey link on main page
+    const hasBeenClosed = localStorage.getItem('feedbackModalClosed');
+    if (hasBeenClosed) {
+      setShowSurveyLink(true);
+    }
+  }, []);
+
+  const handleModalClose = () => {
+    setShowSurveyLink(true);
+  };
+
   return (
     <div>
       {/* Banner */}
@@ -15,14 +30,28 @@ const App = () => {
 
       {/* Content Container */}
       <div className="content-container flex flex-col pt-2 items-center justify-center">
-        {/* Logo and Title */}
+        {/* Title */}
         <div className="flex items-center mb-6">
-          <img src={logo} alt="Logo" className="w-16 h-16 mr-4" />
           <div>
-            <h1 className="text-3xl font-bold text-white-700 text-m sm:text-4xl">Neatco Engineering</h1>
-            <p className="text-lg text-center text-white-700">AI for the Circular Economy</p>
+            <h1 className="text-3xl text-center font-bold text-white-700 text-m sm:text-4xl">Thank you for scanning our QR code!</h1>
           </div>
         </div>
+
+        {/* Survey Link - shown after modal is closed */}
+        {showSurveyLink && (
+          <div className="mb-6 text-center">
+            <p className="text-md mb-2">We'd love your feedback!</p>
+            <a
+              href={AI_IN_MANUFACTURING_FORM_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center survey-link transition-colors"
+            >
+              AI in Manufacturing Survey
+              <FontAwesomeIcon icon={faArrowRight} className="ml-2" />
+            </a>
+          </div>
+        )}
 
         {/* Links Column */}
         <div className="flex flex-col items-center w-full">
@@ -39,10 +68,13 @@ const App = () => {
             <FontAwesomeIcon icon={faYoutube} className="mr-2 text-red-600" /> YouTube
           </a>
           <a href="https://twitter.com/neatcoeng?lang=en" className="button-link">
-            <FontAwesomeIcon icon={faXTwitter} className="mr-2 text-black" /> Twitter
+            <FontAwesomeIcon icon={faXTwitter} className="mr-2 text-black" />
           </a>
         </div>
       </div>
+      
+      {/* Feedback Modal */}
+      <FeedbackModal onModalClose={handleModalClose} />
     </div>
   );
 };
